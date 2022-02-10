@@ -1,0 +1,9 @@
+{
+    "Area_Name": "str",
+    "Year": "int",
+    "Group_Name": "str",
+    "Sub_Group_Name": "str",
+    "Trial_of_Violent_Crimes_by_Courts_By_Confession": "int",
+    "Trial_of_Violent_Crimes_by_Courts_By_trial": "int",
+    "Trial_of_Violent_Crimes_by_Courts_Total": "int"
+}

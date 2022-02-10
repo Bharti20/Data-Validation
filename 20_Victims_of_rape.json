@@ -1,0 +1,13 @@
+{
+    "Area_Name": "str",
+    "Year": "int",
+    "Subgroup": "str",
+    "Rape_Cases_Reported": "int",
+    "Victims_Above_50_Yrs": "int",
+    "Victims_Between_10-14_Yrs": "int",
+    "Victims_Between_14-18_Yrs": "int",
+    "Victims_Between_18-30_Yrs": "int",
+    "Victims_Between_30-50_Yrs": "int",
+    "Victims_of_Rape_Total": "int",
+    "Victims_Upto_10_Yrs": "int"
+}
