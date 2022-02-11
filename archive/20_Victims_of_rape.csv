@@ -1,4 +1,4 @@
-﻿Area_Name,Year,Subgroup,Rape_Cases_Reported,Victims_Above_50_Yrs,Victims_Between_10-14_Yrs,Victims_Between_14-18_Yrs,Victims_Between_18-30_Yrs,Victims_Between_30-50_Yrs,Victims_of_Rape_Total,Victims_Upto_10_Yrs
+Area_Name,Year,Subgroup,Rape_Cases_Reported,Victims_Above_50_Yrs,Victims_Between_10-14_Yrs,Victims_Between_14-18_Yrs,Victims_Between_18-30_Yrs,Victims_Between_30-50_Yrs,Victims_of_Rape_Total,Victims_Upto_10_Yrs
 Andaman & Nicobar Islands,2001,Total Rape Victims,3,0,0,3,0,0,3,0
 Andaman & Nicobar Islands,2001,Victims of Incest Rape,1,0,0,1,0,0,1,0
 Andaman & Nicobar Islands,2001,Victims of Other Rape,2,0,0,2,0,0,2,0
@@ -1049,4 +1049,3 @@ West Bengal,2009,Victims of Other Rape,2333,0,18,84,1834,391,2333,6
 West Bengal,2010,Total Rape Victims,2311,0,22,51,1779,459,2311,0
 West Bengal,2010,Victims of Incest Rape,4,0,1,0,2,1,4,0
 West Bengal,2010,Victims of Other Rape,2307,0,21,51,1777,458,2307,0
-
