@@ -54,16 +54,31 @@ def data_type_checking(fileName, Data):
         z = z+1
     return Data
 
+def count_column_with_wrong_data(df):
+    total_null_columns = 0
+    total_not_n_col = 0
+    total_columns = 0
+    total_null_columns+=len(df.columns[df.isna().any()])      #"No. of columns containing null values"
+    total_not_n_col+=len(df.columns[df.notna().all()])    #"No. of columns not containing null values"
+    total_columns+=len(df.columns)      #"Total no. of columns in the dataframe"
+
+ 
 def formate_checking():  #This function does format checing of data one by one, all file and write modified data in existing file.
     allFiles = reading_files_from_folder()
     for file in allFiles:
         file_data = read_file(file)
         file_data.dropna(inplace = True)
+        df = df.replace(r'^\s*$', np.NaN, regex=True)
+        count_column_with_wrong_data(df)
+        df.dropna(how='all',inplace = True, axis = 1)
+        df.dropna(how ='all',inplace = True, axis = 0)
+        df.dropna(inplace = True)
         final_data = data_type_checking(file, file_data )
-        print(file_data)
         # file_data.to_csv(file,index = False)
 
 formate_checking()
+
+
 
 
 
