@@ -10,6 +10,7 @@ import re
 def reading_files_from_folder(): #This function is basically redaing all files from folder.
     main_folder_path = r'/home/navgurukul/Desktop/dataValidation/archive'
     archive_file_list = os.listdir(main_folder_path)
+    print(archive_file_list)
     return archive_file_list
 
 def read_file(file_name):  #This function is for reading data from file and check file size. if file size is zero so it will delete file. if not it will return file data
@@ -30,8 +31,10 @@ def read_json(fileName):
         list.append(data_in_py[i])
     return list
 
-def data_type_checking(fileName, Data): 
-    dataType = read_json(fileName)
+def data_type_checking(fileName, Data):
+    csv_f = fileName
+    json_f = csv_f.replace('csv','json')
+    dataType = read_json(json_f)
     z = 0
     for column in Data:
         i = 0
@@ -41,11 +44,13 @@ def data_type_checking(fileName, Data):
                 if len(x) == 0:
                     Data.drop(Data.index[i], inplace = True)
             elif dataType[z] == 'int':
+                # Data[Data < 0] = 'NaN'
                 convert = str(value)
                 x = re.findall("[a-zA-Z]", convert)
                 if len(x) != 0:
                     Data.drop(Data.index[i], inplace = True)
             elif dataType[z] == 'float':
+                # Data[Data < 0] = 'NaN'
                 convert = str(value)
                 x = re.findall("[a-zA-Z]", convert)
                 if len(x) != 0:
@@ -60,21 +65,24 @@ def count_column_with_wrong_data(df):
     total_columns = 0
     total_null_columns+=len(df.columns[df.isna().any()])      #"No. of columns containing null values"
     total_not_n_col+=len(df.columns[df.notna().all()])    #"No. of columns not containing null values"
-    total_columns+=len(df.columns)      #"Total no. of columns in the dataframe"
+    total_columns+=len(df.columns)     #"Total no. of columns in the dataframe"
+    print(total_null_columns)
+    print(total_not_n_col)
 
- 
 def formate_checking():  #This function does format checing of data one by one, all file and write modified data in existing file.
     allFiles = reading_files_from_folder()
     for file in allFiles:
-        file_data = read_file(file)
-        file_data.dropna(inplace = True)
-        df = df.replace(r'^\s*$', np.NaN, regex=True)
+        df = read_file('/home/navgurukul/Desktop/dataValidation/archive/'+file)
+        # file_data.dropna(inplace = True)
+        df.replace(r'^\s*$', np.NaN, regex=True)
         count_column_with_wrong_data(df)
         df.dropna(how='all',inplace = True, axis = 1)
         df.dropna(how ='all',inplace = True, axis = 0)
         df.dropna(inplace = True)
-        final_data = data_type_checking(file, file_data )
-        # file_data.to_csv(file,index = False)
+        final_data = data_type_checking(file, df )
+        final_data.to_csv('/home/navgurukul/Desktop/dataValidation/archive/'+file,index = False)
+        print(df)
+        break
 
 formate_checking()
 

@@ -1,4 +1,4 @@
-﻿Area_Name,Year,Group_Name,Sub_Group_Name,Cases_Property_Recovered,Cases_Property_Stolen,Value_of_Property_Recovered,Value_of_Property_Stolen
+Area_Name,Year,Group_Name,Sub_Group_Name,Cases_Property_Recovered,Cases_Property_Stolen,Value_of_Property_Recovered,Value_of_Property_Stolen
 Andaman & Nicobar Islands,2001,Burglary - Property,3. Burglary,27,64,755858,1321961
 Andhra Pradesh,2001,Burglary - Property,3. Burglary,3321,7134,51483437,147019348
 Arunachal Pradesh,2001,Burglary - Property,3. Burglary,66,248,825115,4931904
@@ -2446,6 +2446,5 @@ Sikkim,2010,Total Property,7. Total Property Stolen & Recovered,38,134,1444190,9
 Tamil Nadu,2010,Total Property,7. Total Property Stolen & Recovered,16125,21509,660311804,1317919190
 Tripura,2010,Total Property,7. Total Property Stolen & Recovered,192,879,5666102,33032746
 Uttar Pradesh,2010,Total Property,7. Total Property Stolen & Recovered,9130,35068,577591772,1442670414
-Uttarakhand,2010,Total Property,7. Total Property Stolen & Recovered,964,2234,47135685,123398840
-West Bengal,2010,Total Property,7. Total Property Stolen & Recovered,4548,23759,1168242161,5015168687
-
+Uttarakhand,2010,Total Property,7. Total Property Stolen & Recovered,964,2234,NaN,123398840
+912345,2010,Total Property,7. Total Property Stolen & Recovered,,23759,1168242161,5015168687
