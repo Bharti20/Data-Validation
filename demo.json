@@ -1,7 +1,0 @@
-{
-    "Name": "str",
-    "Team": "str",
-    "Number":"int",
-    "Position": "str",
-    "Age": "int"
-}

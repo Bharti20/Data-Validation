@@ -11,7 +11,7 @@ import numpy as np
 orignal_files_len = []
 modified_files_len = []
 
-def reading_files_from_folder(): #This function is basically redaing all files from folder.
+def reading_files_from_folder(): #This function is basically redaing all files from folder one by one.
     main_folder_path = r'/home/navgurukul/Desktop/dataValidation/archive'
     archive_file_list = os.listdir(main_folder_path)
     return archive_file_list
@@ -96,6 +96,7 @@ def graph_of_four_files_data ():
     plt.title('CSV Files Validated Data')
     plt.show()
 graph_of_four_files_data()
+
 
 
 
